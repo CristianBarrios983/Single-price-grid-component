@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root{
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+
+    --font: 'Karla', sans-serif; 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--Light-Gray);
+    font-family: var(--font);
+}
+
+.container{
+    width: 100%;
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.card{
+    width: 320px;
+    display: grid;
+    grid-template-rows: 3;
+    grid-template-areas: 
+    "info"
+    "membership"
+    "about";
+
+    border-radius: 5px;
+    margin: 3.5rem 0;
+}
+
+.card__info{
+    background-color: white;
+    grid-area: info;
+    border-radius: 7px 7px 0 0;
+    padding: 1.2rem 1.4rem;
+}
+
+.card__title{
+    color: var(--Cyan);
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-bottom: 1rem;
+}
+
+.card__days{
+    font-weight: 400;
+    color: var(--Bright-Yellow);
+    margin-bottom: 1.4rem;
+}
+
+.card__paragraph{
+    color: var(--Grayish-Blue);
+    font-size: .9rem;
+    margin-bottom: 1rem;
+}
+
+.card__membership{
+    grid-area: membership;
+    background-color: var(--Cyan);
+    padding: 1.2rem 1.4rem;
+}
+
+.card__subscription{
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.card__price{
+    font-weight: 700;
+    color: white;
+    font-size: 2rem;
+    margin-bottom: .4rem;
+}
+
+.card__access{
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.card__cta{
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--Bright-Yellow);
+    padding: .8rem;
+    border-radius: 7px;
+}
+
+span{
+    color: var(--Light-Gray);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.card__us{
+    grid-area: about;
+    background-color: hsl(170, 60%, 49%);
+    border-radius: 0 0 7px 7px;
+    padding: 1.2rem 6rem 1.2rem 1.4rem;
+}
+
+.card__question{
+    color: white;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.card__about{
+    color: var(--Light-Gray);
+    line-height: 1.4rem;
+    text-align: start;
+    font-size: .9rem;
+    font-weight: lighter;
+}
+
+
+@media (min-width: 800px){
+    .container{
+        height: 100vh;
+    }
+    .card{
+        width: 700px;
+        display: grid;
+        grid-template-rows: 2;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "info info"
+        "membership about";
+    
+        border-radius: 5px;
+        margin: 0;
+    }
+
+    .card__info{
+        border-radius: 7px 7px 0 0;
+        padding: 2rem 3rem 2rem 1.8rem; 
+    }
+
+    .card__membership{
+        padding: 2rem;
+        border-radius: 0 0 0 7px;
+    }
+
+    .card__us{
+        border-radius: 0 0 7px 0;
+        padding: 2rem 6.5rem 2rem 2rem;
+    }
+
+    .card__about{
+        line-height: 1.2rem;
+        text-align: left;
+    }
+}
+
+
